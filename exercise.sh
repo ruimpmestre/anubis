@@ -16,11 +16,10 @@
 export EXERCISE_HOME=.
 
 #clean
-rm -rf *.class
+rm -rf src/pt/com/anubisnetworks/exercise/*.class
 
 #compile
-javac -cp $EXERCISE_HOME/lib/* *.java
-
+javac -cp $EXERCISE_HOME/lib/* src/pt/com/anubisnetworks/exercise/*.java
 
 #execute
-java -cp .:$EXERCISE_HOME/lib/* ProjectManager "$@"
+java -cp .:$EXERCISE_HOME/src:$EXERCISE_HOME/lib/* pt.com.anubisnetworks.exercise.ProjectManager "$@"
